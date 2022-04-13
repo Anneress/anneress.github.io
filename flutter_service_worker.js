@@ -3,15 +3,23 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "6abd6c1e1585edd4547d48320baab261",
+  "assets/AssetManifest.json": "788702f0778b0c515342b99e8ca9ce2d",
 "assets/assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf": "95233e5162dc57ab3be1c67410a142a5",
 "assets/assets/fonts/nunito/static/Nunito-Bold.ttf": "d959f749429d84048a4b43de46af789d",
 "assets/assets/fonts/nunito/static/Nunito-Italic.ttf": "b8610195c014d12dbdbccdf3b4465871",
 "assets/assets/fonts/nunito/static/Nunito-Regular.ttf": "65e55192c8115f7164d6509a9d389e06",
 "assets/assets/images/andi.png": "f9f940ee4fca2ba148f7a52a837a439e",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-120px-plus.png": "ef7a02b69836dc8b6a732a54c4200dcb",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-32px.png": "f87561b8bb354ef83b09a66e54f70e08",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-64px.png": "438c17272c5f0e9f4a6da34d3e4bc5bd",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-Light-120px-plus.png": "472739dfb5857b1f659f4c4c6b4568d0",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-Light-32px.png": "d56df49a807a9fd06eb1667a84d3810e",
+"assets/assets/images/GitHub-Mark/PNG/GitHub-Mark-Light-64px.png": "eb94bb97c3410733ce017b184d314723",
+"assets/assets/images/GitHub-Mark/Vector/GitHub-Mark.ai": "d26611a8033adc15cdd0bb7837e6d5bb",
+"assets/assets/images/GitHub-Mark/Vector/GitHub-Mark.eps": "8d6f6ff0bcc4512f99f05758b51590ec",
 "assets/FontManifest.json": "a3988465f55f45e6c7994618b7bff196",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/NOTICES": "2ceedb153a9ddf191c47e7cb8b46fda6",
+"assets/NOTICES": "31e3ebdf3c96ea4e70ec64611d37456c",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
 "canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
@@ -22,9 +30,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "bf0e0cdf83fed502bd82e81914bde1bc",
-"/": "bf0e0cdf83fed502bd82e81914bde1bc",
-"main.dart.js": "681db2dee27304566228b364b48a8573",
+"index.html": "72afc6187b050f56b57a66b29aaf5ac9",
+"/": "72afc6187b050f56b57a66b29aaf5ac9",
+"main.dart.js": "d25de80a7c954fe4f2b78ebe00904504",
 "manifest.json": "64e19a3f5a974856c03a43ce6cb344ab",
 "version.json": "1730fb3b4840b860aa805def1d355248"
 };
