@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
 
@@ -29,76 +18,56 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>flutter_personal_homepage</title>
+  <title>Andreas Web Welt</title>
   <link rel="manifest" href="manifest.json">
+
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <!-- This script installs service_worker.js to provide PWA functionality to
-       application. For more information, see:
-       https://developers.google.com/web/fundamentals/primers/service-workers -->
-  <script>
-    var serviceWorkerVersion = '3424960431';
-    var scriptLoaded = false;
-    function loadMainDartJs() {
-      if (scriptLoaded) {
-        return;
-      }
-      scriptLoaded = true;
-      var scriptTag = document.createElement('script');
-      scriptTag.src = 'main.dart.js';
-      scriptTag.type = 'application/javascript';
-      document.body.append(scriptTag);
-    }
-
-    if ('serviceWorker' in navigator) {
-      // Service workers are supported. Use them.
-      window.addEventListener('load', function () {
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
-        navigator.serviceWorker.register(serviceWorkerUrl)
-          .then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener('statechange', () => {
-                if (serviceWorker.state == 'activated') {
-                  console.log('Installed new service worker.');
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing || reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log('New service worker available.');
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log('Loading app from service worker.');
-              loadMainDartJs();
-            }
-          });
-
-        // If service worker doesn't succeed in a reasonable amount of time,
-        // fallback to plaint <script> tag.
-        setTimeout(() => {
-          if (!scriptLoaded) {
-            console.warn(
-              'Failed to load app from service worker. Falling back to plain <script> tag.',
-            );
-            loadMainDartJs();
-          }
-        }, 4000);
-      });
-    } else {
-      // Service workers not supported. Just drop the <script> tag.
-      loadMainDartJs();
-    }
-  </script>
+<body class="bg-gray-900 text-white">
+    <div class="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div class="absolute w-96 h-96 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-50"></div>
+        
+        <header class="absolute top-0 left-0 w-full p-6 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Mein Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-blue-400">Über mich</a></li>
+                    <li><a href="#projects" class="hover:text-blue-400">Projekte</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="text-center p-10">
+            <h2 class="text-5xl font-extrabold mb-6">Hallo, ich bin <span class="text-blue-400">Software Entwickler</span></h2>
+            <p class="text-lg max-w-2xl mx-auto">Ich spezialisiere mich auf moderne Webtechnologien, IT-Lösungen und individuelle Softwareentwicklung.</p>
+            <button class="mt-6 px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600">Mehr erfahren</button>
+        </section>
+        
+        <section id="about" class="w-full p-10 bg-gray-800 rounded-lg shadow-lg mt-10 max-w-4xl">
+            <h3 class="text-3xl font-semibold mb-4">Über mich</h3>
+            <p>Mit mehreren Jahren Erfahrung in der Softwareentwicklung und IT-Beratung helfe ich Unternehmen dabei, ihre digitale Infrastruktur zu optimieren.</p>
+        </section>
+        
+        <section id="projects" class="w-full p-10 mt-10 max-w-4xl">
+            <h3 class="text-3xl font-semibold mb-4">Projekte</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold">Projekt 1</h4>
+                    <p class="mt-2">Beschreibung eines spannenden Projekts.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold">Projekt 2</h4>
+                    <p class="mt-2">Eine weitere interessante Entwicklung.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="w-full p-10 mt-10 bg-gray-800 rounded-lg shadow-lg max-w-4xl">
+            <h3 class="text-3xl font-semibold mb-4">Kontakt</h3>
+            <p>Interessiert an einer Zusammenarbeit? Schreib mir eine Nachricht!</p>
+            <button class="mt-4 px-6 py-3 bg-purple-500 text-white rounded-full shadow-lg hover:bg-purple-600">Kontakt aufnehmen</button>
+        </section>
+    </div>
 </body>
 </html>
